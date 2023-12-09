@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.weatherinfo"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.weatherinfo"
@@ -33,7 +33,11 @@ android {
 
 dependencies {
 
+    implementation ("com.squareup.retrofit2:converter-gson:2.3.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.google.android.gms:play-services-location:18.0.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
     implementation("com.google.android.material:material:1.10.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

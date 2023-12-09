@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Weather Info</string>
+    <string name="message_gps_rus">Включить геолокацию на Вашем устройстве, для отображения погоды в вашем регионе?</string>
+    <string name="message_gps_eng">Enable geolocation on your device to display the weather in your region?</string>
+    <string name="message_location_rus">Разрешить этому приложению отслеживать Вашу геолокацию, для отображения погоды в вашем регионе?</string>
+    <string name="message_location_eng">Should I allow this app to track your geolocation to display the weather in your region?</string>
 </resources>
