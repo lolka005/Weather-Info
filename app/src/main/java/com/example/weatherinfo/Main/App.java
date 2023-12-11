@@ -71,8 +71,6 @@ public class App extends AppCompatActivity implements SwipeRefreshLayout.OnRefre
     private ListView lv;
     private MyAdapter arad;
     private Context context;
-    private Boolean NeedAccess = true;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -125,8 +123,7 @@ public class App extends AppCompatActivity implements SwipeRefreshLayout.OnRefre
                 }
                 else
                 {
-                    if(NeedAccess)
-                        LocationAccess();
+                    LocationAccess();
                 }
             } else
                 {
@@ -227,7 +224,6 @@ public class App extends AppCompatActivity implements SwipeRefreshLayout.OnRefre
                             break;
 
                         case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
-                            Log.d("Da10","DAUN");
                             break;
                     }
                 }
@@ -264,7 +260,6 @@ public class App extends AppCompatActivity implements SwipeRefreshLayout.OnRefre
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
-                                NeedAccess = false;
                                 checkPermission();
                             }
                         })
@@ -273,7 +268,6 @@ public class App extends AppCompatActivity implements SwipeRefreshLayout.OnRefre
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
-                                NeedAccess = true;
                             }
                         });
         alterDialog.show();
